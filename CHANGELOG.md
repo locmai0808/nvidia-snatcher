@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.5.0...v1.6.0) (2020-09-24)
+
+
+### Features
+
+* **notification:** add pushover priority setting ([#186](https://www.github.com/jef/nvidia-snatcher/issues/186)) ([f277172](https://www.github.com/jef/nvidia-snatcher/commit/f2771721914a20619833df8ccb2ac44298687b4d))
+* **store:** add 3090s to amazon-ca ([#274](https://www.github.com/jef/nvidia-snatcher/issues/274)) ([e992cf4](https://www.github.com/jef/nvidia-snatcher/commit/e992cf4db85f045fc8d03c9b93286fb72bad1061))
+* **store:** add additional cards to all stores ([#286](https://www.github.com/jef/nvidia-snatcher/issues/286)) ([d25a643](https://www.github.com/jef/nvidia-snatcher/commit/d25a643425020fa3f7cd48972360ede17501afeb))
+* **store:** add amazon cards and `cartUrl`s ([#284](https://www.github.com/jef/nvidia-snatcher/issues/284)) ([d69189f](https://www.github.com/jef/nvidia-snatcher/commit/d69189f12c893fb6d88b198d802ff8e36a69bc88))
+
 ## [1.5.0](https://www.github.com/jef/nvidia-snatcher/compare/v1.4.0...v1.5.0) (2020-09-24)
 
 
