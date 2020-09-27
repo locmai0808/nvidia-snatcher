@@ -49,6 +49,7 @@ function envOrNumber(environment: string | undefined, number?: number): number {
 const browser = {
 	isHeadless: envOrBoolean(process.env.HEADLESS),
 	isTrusted: envOrBoolean(process.env.BROWSER_TRUSTED, false),
+	lowBandwidth: envOrBoolean(process.env.LOW_BANDWIDTH, false),
 	maxBackoff: envOrNumber(process.env.PAGE_BACKOFF_MAX, 3600000),
 	maxSleep: envOrNumber(process.env.PAGE_SLEEP_MAX, 10000),
 	minBackoff: envOrNumber(process.env.PAGE_BACKOFF_MIN, 10000),
@@ -66,6 +67,7 @@ const notifications = {
 	},
 	email: {
 		password: envOrString(process.env.EMAIL_PASSWORD),
+		to: envOrString(process.env.EMAIL_TO, envOrString(process.env.EMAIL_USERNAME)),
 		username: envOrString(process.env.EMAIL_USERNAME)
 	},
 	phone: {

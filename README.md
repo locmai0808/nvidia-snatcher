@@ -30,11 +30,11 @@ The purpose of this bot is to get an Nvidia card. It tries multiple things to do
 
 > :point_right: You may get false positives from time to time, so I apologize for that. The library currently waits for all calls to be completed before parsing, but sometimes this can have unknown behavior. Patience is a virtue :)
 
-| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **Zotac** |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **3070**| | | | | | | | | | | | | | |
-| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
-| **3090** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | | `✔` | `✔` | `✔` | | `✔` |
+| | **Adorama** | **Amazon** | **Amazon (CA)** | **ASUS** | **B&H** | **Best Buy** | **Best Buy (CA)** | **EVGA** | **Micro Center** | **Newegg** | **Newegg (CA)** | **Nvidia** | **Office Depot** | **PNY** | **Zotac** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **3070**| | | | | | | | | | | | | | `✔` | |
+| **3080** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` |
+| **3090** | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | `✔` | | `✔` | `✔` | `✔` | | `✔` | `✔` |
 
 ## Installation and prerequisites
 
@@ -73,10 +73,12 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | `DISCORD_NOTIFY_GROUP` | Discord group you would like to notify | Can be comma separated, use role ID, E.g.: `<@2834729847239842>` |
 | `DISCORD_WEB_HOOK` | Discord Web Hook URL | Can be comma separated, use whole webhook URL |
 | `EMAIL_USERNAME` | Gmail address | E.g.: `jensen.robbed.us@gmail.com` |
+| `EMAIL_TO` | Destination Email | Defaults to username if not set. Can be comma separated |
 | `EMAIL_PASSWORD` | Gmail password | See below if you have MFA |
 | `HEADLESS` | Puppeteer to run headless or not | Debugging related, default: `true` |
 | `IN_STOCK_WAIT_TIME` | Time to wait between requests to the same link if it has that card in stock | In seconds, default: `0` |
 | `LOG_LEVEL` | [Logging levels](https://github.com/winstonjs/winston#logging-levels) | Debugging related, default: `info` |
+| `LOW_BANDWIDTH` | Blocks images/fonts to reduce traffic | Disables ad blocker, default: `false` |
 | `MICROCENTER_LOCATION` | Specific MicroCenter location to search | Default : `web` |
 | `OPEN_BROWSER` | Toggle for whether or not the browser should open when item is found | Default: `true` |
 | `PAGE_TIMEOUT` | Navigation Timeout in milliseconds | `0` for infinite, default: `30000` |
@@ -136,6 +138,7 @@ Here is a list of variables that you can use to customize your newly copied `.en
 | Nvidia | `nvidia`|
 | Nvidia (API) | `nvidia-api`|
 | Office Depot | `officedepot`|
+| PNY | `pny`|
 | Zotac | `zotac`|
 
 <details>
